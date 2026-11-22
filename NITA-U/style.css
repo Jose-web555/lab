@@ -1,0 +1,232 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Brand colours */
+:root {
+    --dark-blue: #002147;
+    --gold: #D4AF37;
+}
+
+/* Survey Header */
+.survey-header {
+    background-color: var(--dark-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.survey-header h1 {
+    font-size: 24px;
+}
+
+/* Banner */
+.banner {
+    height: 300px;
+    width: 100%;
+    background-image: url("images/survey-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner-overlay {
+    background-color: rgba(0, 33, 71, 0.65);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-overlay h2 {
+    color: white;
+    font-size: 32px;
+}
+
+/* Progress Indicator */
+.progress-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+    background-color: white;
+}
+
+.progress-step {
+    text-align: center;
+    color: #777;
+}
+
+.progress-step span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #333;
+    font-weight: bold;
+}
+
+.progress-step p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* Highlight current step in gold */
+.progress-step.current span {
+    background-color: var(--gold);
+    color: var(--dark-blue);
+}
+
+.progress-step.current p {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.progress-line {
+    width: 80px;
+    height: 3px;
+    background-color: #ddd;
+    margin: 0 15px 25px;
+}
+
+/* Main form container */
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Fieldset */
+fieldset {
+    border: 2px solid var(--dark-blue);
+    border-radius: 8px;
+    padding: 25px;
+    background-color: white;
+}
+
+legend {
+    color: var(--dark-blue);
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* Form groups */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group > label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+/* Text inputs and select fields */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+/* Radio buttons */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Input focus effect */
+input:focus,
+select:focus {
+    outline: 2px solid var(--gold);
+    border-color: var(--dark-blue);
+}
+
+/* Submit button */
+button {
+    background-color: var(--dark-blue);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--gold);
+    color: var(--dark-blue);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-blue);
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .survey-header {
+        flex-direction: column;
+    }
+
+    .survey-header h1 {
+        font-size: 19px;
+    }
+
+    .banner-overlay h2 {
+        font-size: 23px;
+    }
+
+    .progress-line {
+        width: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .progress-step p {
+        font-size: 11px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
